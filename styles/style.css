@@ -1,0 +1,95 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	padding: 5%; 
+	margin: auto; 
+}
+.section {
+	padding: 5px; 
+	margin: 5%; 
+	position: relative; 
+	/*border-bottom: .5px solid gray; */
+}
+.arrow {
+	color: gray;
+	opacity: .75; 
+}
+input[type="checkbox"]:hover {
+	cursor: pointer; 
+}
+.section:hover > .arrow {
+	color: rgb(88,176,236);
+	transform: rotate(45deg);
+	opacity: 1; 
+}
+h1 {	
+	font-size: 40px; 
+	display: inline;
+	color: rgb(88,176,236);
+}
+input[type="checkbox"] {
+	-webkit-appearance: none; 
+	height: 40px;
+	width: 100%; 
+	position: absolute;
+	left: 0;
+	top: 0; 
+}
+input[type="checkbox"]:checked ~ .toggling-content {
+	display: block;
+}
+input[type="checkbox"]:checked ~ .arrow {
+	transform: rotate(180deg);
+}
+.toggling-content {
+	padding: 10px; 
+	display: none; 
+	line-height: 1.5; 
+}
+p {
+	font-size: 14px;
+	color: gray;
+	line-height: 1.5; 
+}
+.subSection {
+	position: relative;
+}
+h2 {
+	font-size: 16px; 
+	color: rgb(88,176,236);
+	display: inline; 
+}
+.subSection > div {
+	padding: 10px; 
+}
+.subSection:hover > .arrow {
+	color: rgb(88,176,236);
+	transform: rotate(45deg);
+	cursor: pointer; 
+}
+span {
+	font-size: 12px; 
+	color: gray; 
+}
+.line {
+	margin-top: 3px; 
+	width: 100%;
+	background: gray;
+	height: 1px; 
+	opacity: .5; 
+}
+@media only screen and (max-width: 770px) {
+	h1 {
+		font-size: 25px; 
+	}
+	h2 {
+		font-size: 12px; 
+	}
+	p {
+		font-size: 10px; 
+	}
+	span {
+		font-size: 8px; 
+	}
+}
